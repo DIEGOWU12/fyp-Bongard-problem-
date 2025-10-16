@@ -1,0 +1,1 @@
+Dashed lines inside solid shape make an identical but slightly smaller shape, parallel to the one outside vs. not so.

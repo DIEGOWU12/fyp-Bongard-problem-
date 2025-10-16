@@ -1,0 +1,1 @@
+Half of the square is filled vs. either more or less than half of the square is filled.

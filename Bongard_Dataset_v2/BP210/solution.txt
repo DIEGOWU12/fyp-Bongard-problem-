@@ -1,0 +1,1 @@
+Part of at least one object is out of box vs. all objects are within the box.

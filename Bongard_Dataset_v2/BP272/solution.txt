@@ -1,0 +1,1 @@
+Convex hull is a triangle vs. convex hull is a quadrilateral.

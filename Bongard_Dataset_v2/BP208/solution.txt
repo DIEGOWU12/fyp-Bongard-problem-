@@ -1,0 +1,1 @@
+All curves spiral counterclockwise, starting from maximum curvature vs. all curves spiral clockwise, starting from maximum curvature.

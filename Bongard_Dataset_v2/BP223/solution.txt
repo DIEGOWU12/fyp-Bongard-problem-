@@ -1,0 +1,1 @@
+Large black region if completed is a circle vs. large black region if completed is an ellipse.

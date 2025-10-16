@@ -1,0 +1,1 @@
+Straight lines that join filled and outlined circles intersect vs. straight lines that join filled and outlined circles do not intersect.

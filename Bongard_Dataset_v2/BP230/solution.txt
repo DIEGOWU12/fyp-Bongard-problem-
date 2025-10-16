@@ -1,0 +1,1 @@
+The sum of vertices, line ends, and dots is 7 vs. not so.

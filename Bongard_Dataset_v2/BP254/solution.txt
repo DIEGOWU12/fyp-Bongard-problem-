@@ -1,0 +1,1 @@
+Circle and two vertices are collinear vs. no two vertices and the circle are collinear.

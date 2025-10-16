@@ -1,0 +1,1 @@
+The two points are reachable through a path vs. the two points are unreachable by any path.
