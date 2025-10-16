@@ -2,27 +2,29 @@ from PIL import Image, ImageDraw, ImageFont
 import os
 import textwrap
 
-# --- 配置参数 (必须与爬虫代码中的设置一致) ---
-OUTPUT_DIR = "Bongard_Dataset_v2"
-START_ID = 1
-END_ID = 300 # 假设您爬取了 BP1 到 BP300
+# ====================================================================
+# --- 配置参数 (你需要修改这里) ---
+# = ====================================================================
 
-# --- 图像和布局常量 ---
-# Bongard Problem 的标准布局是 2 行 x 6 列 (用于显示)
+# 示例文件夹路径：请将这里改为你想要处理的 BP 文件夹的路径
+# 例如：'Bongard_Dataset_v2/BP14'
+TARGET_FOLDER_PATH = "Bongard_Dataset_v2/BP14" 
+
+# 解决方案文本：如果找不到 solution.txt，将使用这个默认文本
+DEFAULT_SOLUTION_TEXT = "未找到 solution.txt 文件，请检查路径。这是默认的解决方案描述。"
+OUTPUT_FILENAME = "combined_result.png"
+
+# --- 布局常量 ---
 GRID_ROWS = 2 
 GRID_COLS = 6
-# 假设每张 Bongard 图片的标准尺寸
 SINGLE_IMG_SIZE = 60 
 IMG_PADDING = 5
 
-# 图片区域总尺寸： 2 行，每行 6 列。
-# 宽度 = 6 * 60 + 7 * 5 = 395
-# 高度 = 2 * 60 + 3 * 5 = 135
+# 计算图片区域总尺寸
 IMG_AREA_WIDTH = GRID_COLS * SINGLE_IMG_SIZE + (GRID_COLS + 1) * IMG_PADDING
 IMG_AREA_HEIGHT = GRID_ROWS * SINGLE_IMG_SIZE + (GRID_ROWS + 1) * IMG_PADDING
 
-# 文本区域的宽度
-TEXT_AREA_WIDTH = 350 # 稍微增加宽度以容纳更多文字
+TEXT_AREA_WIDTH = 350 
 TEXT_PADDING = 20
 
 # 字体设置
@@ -35,114 +37,90 @@ except IOError:
     FONT = ImageFont.load_default()
 
 # ====================================================================
-# 图片合并函数 (已调整布局逻辑)
+# 核心图片合并函数
 # ====================================================================
 
-def combine_data_to_single_image(bp_id):
+def combine_folder_images(folder_path):
     """
-    将 12 张图片 (左侧 6 张 + 右侧 6 张) 排列成 2x6 网格在左边，
-    解决方案文本在右边，合并成一张 PNG 图片。
+    读取指定文件夹内的所有 PNG 图片，按照 2x6 布局与文本合并。
     """
-    bp_folder = f"BP{bp_id}"
-    bp_dir = os.path.join(OUTPUT_DIR, bp_folder)
-    
-    # 1. 检查文件夹和文件是否存在
-    if not os.path.exists(bp_dir):
-        print(f"警告: 文件夹 {bp_dir} 不存在。跳过 BP{bp_id}。")
-        return False
-    
-    # 获取 TXT 文件内容
-    txt_path = os.path.join(bp_dir, "solution.txt")
-    if not os.path.exists(txt_path):
-        print(f"警告: 找不到解决方案文件 {txt_path}。跳过 BP{bp_id}。")
-        return False
+    print(f"正在处理文件夹: {folder_path}")
 
-    with open(txt_path, 'r', encoding='utf-8') as f:
-        solution_text = f.read().strip()
+    # 1. 获取图片文件列表 (不限制文件名开头，只找 PNG 文件)
+    img_files = sorted([f for f in os.listdir(folder_path) if f.lower().endswith('.png')])
     
-    # 2. 创建空白画布
+    if len(img_files) != 12:
+        print(f"警告: 文件夹中找到 {len(img_files)} 张图片，预期 12 张。跳过合并。")
+        return False
     
-    # 计算最终图像尺寸
+    # 2. 获取解决方案文本
+    txt_path = os.path.join(folder_path, "solution.txt")
+    solution_text = DEFAULT_SOLUTION_TEXT
+    if os.path.exists(txt_path):
+        try:
+            with open(txt_path, 'r', encoding='utf-8') as f:
+                solution_text = f.read().strip()
+        except Exception as e:
+            print(f"读取 solution.txt 失败: {e}")
+    else:
+        print("警告: 文件夹中未找到 solution.txt，使用默认文本。")
+    
+    # 3. 创建空白画布
     TOTAL_WIDTH = IMG_AREA_WIDTH + TEXT_AREA_WIDTH
     TOTAL_HEIGHT = IMG_AREA_HEIGHT
     
-    # 创建白色背景画布
     combined_img = Image.new('RGB', (TOTAL_WIDTH, TOTAL_HEIGHT), color='white')
     draw = ImageDraw.Draw(combined_img)
     
-    # 3. 绘制图片区域 (保持 2x6 布局)
-    
-    # 找到所有图片文件，并按名称排序（例如 EX1.png, EX2.png, ..., EX12.png）
-    # 确保排序是正确的，这依赖于爬虫中文件命名的一致性。
-    img_files = sorted([f for f in os.listdir(bp_dir) if f.lower().endswith('.png') and f.startswith('ex')])
-    
-    if len(img_files) != 12:
-        print(f"警告: BP{bp_id} 找到 {len(img_files)} 张图片，预期 12 张。跳过合并。")
-        return False
-
+    # 4. 绘制图片区域 (2x6 布局)
     for i in range(len(img_files)):
-        img_path = os.path.join(bp_dir, img_files[i])
+        img_path = os.path.join(folder_path, img_files[i])
         
         try:
             img = Image.open(img_path).convert('RGB')
-            # 调整图片大小以适应网格
             img_resized = img.resize((SINGLE_IMG_SIZE, SINGLE_IMG_SIZE))
             
-            # **核心逻辑：计算 2x6 网格位置**
-            row = i // GRID_COLS # i=0-5 -> row=0; i=6-11 -> row=1
-            col = i % GRID_COLS # i=0, 6 -> col=0; i=1, 7 -> col=1; ...
+            # 计算 2x6 网格位置
+            row = i // GRID_COLS 
+            col = i % GRID_COLS 
             
             x = IMG_PADDING + col * (SINGLE_IMG_SIZE + IMG_PADDING)
             y = IMG_PADDING + row * (SINGLE_IMG_SIZE + IMG_PADDING)
             
             combined_img.paste(img_resized, (x, y))
             
-            # 添加图片编号 (可选)
-            # draw.text((x + 5, y + 5), str(i + 1), fill='red', font=FONT)
-            
         except Exception as e:
             print(f"处理图片 {img_files[i]} 失败: {e}")
             continue
             
-    # 4. 绘制分隔线
-    # 在图片区域和文本区域之间画一条黑线
+    # 5. 绘制分隔线
     line_x = IMG_AREA_WIDTH
     draw.line([(line_x, 0), (line_x, TOTAL_HEIGHT)], fill='black', width=2)
     
-    # 5. 绘制文本区域
-    
-    # 文本起始位置 (在分隔线右侧)
+    # 6. 绘制文本区域
     text_x = line_x + TEXT_PADDING
     text_y = TEXT_PADDING
     
-    # 文本换行处理，以适应文本区域的宽度
-    
-    # 确定字体大小和行高
     try:
-        avg_char_width = FONT.getbbox('A')[2] - FONT.getbbox('A')[0] # 更好地获取字符宽度
+        avg_char_width = FONT.getbbox('A')[2] - FONT.getbbox('A')[0]
     except:
-        avg_char_width = 10 # 失败时使用默认值
+        avg_char_width = 10
         
-    # 计算每行字符数
     max_chars_per_line = int((TEXT_AREA_WIDTH - 2 * TEXT_PADDING) / avg_char_width * 1.2)
-    
-    # 使用 textwrap 进行换行
     wrapped_lines = textwrap.wrap(solution_text, width=max_chars_per_line)
     
     try:
-        line_height = FONT.getbbox('Tg')[3] - FONT.getbbox('Tg')[1] + 5 # 更好的行高计算
+        line_height = FONT.getbbox('Tg')[3] - FONT.getbbox('Tg')[1] + 5
     except:
-        line_height = 20 # 失败时使用默认值
+        line_height = 20
 
-    
     # 渲染每一行文本
     for line in wrapped_lines:
         draw.text((text_x, text_y), line, fill='black', font=FONT)
         text_y += line_height
         
-    # 6. 保存最终图片
-    output_filename = f"{bp_folder}_combined.png"
-    output_path = os.path.join(bp_dir, output_filename)
+    # 7. 保存最终图片
+    output_path = os.path.join(folder_path, OUTPUT_FILENAME)
     combined_img.save(output_path)
     print(f"-> 成功合并并保存到 {output_path}")
     return True
@@ -150,14 +128,7 @@ def combine_data_to_single_image(bp_id):
 # ====================================================================
 # 主运行程序
 # ====================================================================
-
 if __name__ == "__main__":
-    print(f"开始合并 {START_ID} 到 {END_ID} 的 Bongard Problems 数据...")
-    
-    # 确保 Arial 字体可用，否则会使用默认字体
-    
-    for bp_id in range(START_ID, END_ID + 1):
-        print(f"正在合并 BP{bp_id}...")
-        combine_data_to_single_image(bp_id)
-
-    print("所有合并任务完成。")
+    # 确保你修改了 TARGET_FOLDER_PATH 为你实际要测试的文件夹！
+    combine_folder_images(TARGET_FOLDER_PATH) 
+    print("操作完成。")
