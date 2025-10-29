@@ -1,0 +1,1 @@
+Object on the right fits in pattern on the left vs. object on the right does not fit in pattern on the left.

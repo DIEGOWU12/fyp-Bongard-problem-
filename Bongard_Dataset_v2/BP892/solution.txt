@@ -1,0 +1,1 @@
+Black shapes can be arranged such that they fit inside rectangular outline vs. not so.

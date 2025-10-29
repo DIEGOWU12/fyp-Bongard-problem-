@@ -1,0 +1,1 @@
+Meta Bongard Problems that sort Bongard Problems based on other information than just their solutions (e.g. what format the Bongard Problem is, or what specific examples are shown in it) vs. Meta Bongard Problems that sort Bongard Problems purely based on solution.

@@ -1,0 +1,1 @@
+5 collinear objects, of which the 3rd is moved elsewhere vs. 5 collinear objects, of which the 2nd/4th is moved elsewhere.

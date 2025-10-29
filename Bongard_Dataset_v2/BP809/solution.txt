@@ -1,0 +1,1 @@
+Figures can be transformed into one another by smooth stretching (before and after there are the same crossroad-points; there is a curve connecting points before if and only if there is a curve connecting those points after) vs. not so.

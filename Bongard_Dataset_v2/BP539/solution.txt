@@ -1,0 +1,1 @@
+Meta Bongard Problems such that if the sides of an example Bongard Problem are switched its sorting within the meta Problem may switch vs. meta Bongard Problems that always sort flipped versions on the same side.

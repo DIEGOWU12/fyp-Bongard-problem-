@@ -1,0 +1,1 @@
+Increasing quantity has no lower (or upper) bound (and gives a representation of negative numbers) vs. increasing quantity has lower (and/or upper) bound.

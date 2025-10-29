@@ -1,0 +1,1 @@
+Shapes identical after rotation vs. shapes identical after rotation and mirroring.

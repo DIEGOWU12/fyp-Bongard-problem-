@@ -1,0 +1,1 @@
+Any transformation (rotation or flip) that sends one L to another L sends each L to some other L versus not so.

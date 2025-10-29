@@ -1,0 +1,1 @@
+Bongard Problems such that there is a way of making an infinite list of all relevant possible left-sorted examples vs. Bongard Problems where there is no such way of listing all left-sorted examples.

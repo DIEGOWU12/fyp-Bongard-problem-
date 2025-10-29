@@ -1,0 +1,1 @@
+Bongard Problems with a finite number of possible left examples vs. not.

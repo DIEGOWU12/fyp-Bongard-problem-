@@ -1,0 +1,1 @@
+Graph can be redrawn such that no edges intersect vs. not so.

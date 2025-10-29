@@ -1,0 +1,1 @@
+Position-independent Bongard Problems where positioning varies vs. position-independent Bongard Problems where positioning is consistent

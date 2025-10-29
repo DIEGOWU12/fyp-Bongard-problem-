@@ -1,0 +1,1 @@
+Same amount of black in any vertical slice vs. varying amounts of black in vertical slices.

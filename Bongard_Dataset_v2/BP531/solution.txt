@@ -1,0 +1,1 @@
+Fractal is tiled by three smaller copies of itself vs. fractal is tiled by five smaller copies of itself.

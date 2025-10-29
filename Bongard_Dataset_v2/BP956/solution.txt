@@ -1,0 +1,1 @@
+Nested pairs of brackets vs. other arrangement of brackets (some open brackets are not closed or there are extra closing brackets).

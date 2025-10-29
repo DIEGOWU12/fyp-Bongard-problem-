@@ -1,0 +1,1 @@
+Left half has more black (less white) than right half versus vice versa.

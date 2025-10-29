@@ -1,0 +1,1 @@
+Number of dots is n factorial for some n vs. not so.

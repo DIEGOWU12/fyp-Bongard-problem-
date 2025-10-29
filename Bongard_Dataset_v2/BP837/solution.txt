@@ -1,0 +1,1 @@
+Bongard Problems in which individual examples may be unclearly sorted (it may be arguable which side they should go on) but many examples together are still able to communicate the solution vs. other Bongard Problems.

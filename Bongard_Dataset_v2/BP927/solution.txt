@@ -1,0 +1,1 @@
+Image of Bongard Problem whose self-sorting depends on examples in it vs. image of Bongard Problem that will sort any Bongard Problem with its solution on either its left or right regardless of examples chosen.

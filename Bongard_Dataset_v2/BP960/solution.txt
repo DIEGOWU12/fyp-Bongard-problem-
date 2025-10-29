@@ -1,0 +1,1 @@
+Bongard Problems that require the solver to create their own new picture in the process of solving vs. other Bongard Problems.

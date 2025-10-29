@@ -1,0 +1,1 @@
+Every vertex is connected to every other vs. vertices are connected in a cycle (no other connections).

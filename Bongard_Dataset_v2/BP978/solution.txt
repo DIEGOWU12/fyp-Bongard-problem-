@@ -1,0 +1,1 @@
+Bongard Problems in which all examples have a high amount of information that a person must unpack in order to sort them vs. Bongard Problems in which all examples have a low amount of information that a person must unpack in order to sort them.

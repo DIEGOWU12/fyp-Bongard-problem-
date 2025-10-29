@@ -1,0 +1,1 @@
+Left shapes can be placed on top of each other to make right shape vs. not so.

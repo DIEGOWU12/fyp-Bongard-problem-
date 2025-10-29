@@ -1,0 +1,1 @@
+Image of Bongard Problem such that pixel-inverting examples flips the solution vs. image of Bongard Problem such that pixel-inverting examples leaves the solution invariant.

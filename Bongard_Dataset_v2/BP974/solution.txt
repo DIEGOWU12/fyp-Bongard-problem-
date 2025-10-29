@@ -1,0 +1,1 @@
+"Bounding-box-dependent" Bongard Problems vs. Bongard Problems in which the bounding box can be extended arbitrarily in any direction (in white space) without switching the sorting of any examples.

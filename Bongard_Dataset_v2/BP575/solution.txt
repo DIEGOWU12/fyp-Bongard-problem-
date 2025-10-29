@@ -1,0 +1,1 @@
+Non-number-based Bongard Problems vs. Bongard Problems whose solutions only depend on counting the number of something.

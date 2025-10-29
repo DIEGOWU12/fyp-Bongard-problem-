@@ -1,0 +1,1 @@
+Contains smaller copy of itself vs. doesn't.

@@ -1,0 +1,1 @@
+Graph contains a "loop" a.k.a. cycle (cyclic) versus graph is acyclic.

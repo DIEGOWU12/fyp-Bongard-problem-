@@ -1,0 +1,1 @@
+Can be constructed using 2 identical copies of an image (full overlapping not allowed) vs. not so.

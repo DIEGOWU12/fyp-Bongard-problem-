@@ -1,0 +1,1 @@
+Shape outlines that aren't triangles vs. black shapes that aren't squares.

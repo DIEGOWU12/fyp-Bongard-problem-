@@ -1,0 +1,1 @@
+All points (small white circles) on one figure can be glued together to make the other figure vs. not so.

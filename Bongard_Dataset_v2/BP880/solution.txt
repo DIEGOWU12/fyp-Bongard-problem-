@@ -1,0 +1,1 @@
+Non-overlapping sides (patterns are disjoint) vs. possible object(s) could fit in overlap of sides (patterns intersect).

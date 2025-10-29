@@ -1,0 +1,1 @@
+Objects define a map from the top row of boxes to the bottom row of boxes vs. not so.

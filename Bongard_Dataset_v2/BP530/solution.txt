@@ -1,0 +1,1 @@
+Fractal tiles itself with uniformly scaled-down copies of itself vs. fractal tiles itself with stretched copies of itself.

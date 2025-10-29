@@ -1,0 +1,1 @@
+Shape can be combined with a copy of itself to form a convex shape vs. not so.
