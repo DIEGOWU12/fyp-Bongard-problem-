@@ -1,1 +1,0 @@
-Object below ambiguously sorted (not clearly left or right) by Bongard Problem image above vs. object below clearly sorted by Bongard Problem image above.

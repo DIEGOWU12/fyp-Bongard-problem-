@@ -1,1 +1,0 @@
-Objects identical after mirroring horizontally vs. objects identical after mirroring vertically.

@@ -1,1 +1,0 @@
-Cube number of dots vs. non-cube number of dots.

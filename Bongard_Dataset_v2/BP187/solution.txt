@@ -1,1 +1,0 @@
-Sides of parts are one more than sides of whole vs. sides of parts are one less than sides of whole.

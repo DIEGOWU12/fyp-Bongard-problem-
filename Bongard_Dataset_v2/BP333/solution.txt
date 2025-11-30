@@ -1,1 +1,0 @@
-Drawing of platonic solid (regular polyhedron) vs. drawing of non-platonic solid.

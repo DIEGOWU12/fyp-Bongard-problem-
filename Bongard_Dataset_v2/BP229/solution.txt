@@ -1,1 +1,0 @@
-When the objects are rotated and their dots are overlapped and eliminated, they form three-square-tall structures with columns of the same color vs. not so.

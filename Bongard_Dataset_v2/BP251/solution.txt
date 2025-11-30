@@ -1,1 +1,0 @@
-Tetrahedron projected on the box plane vs. not so.

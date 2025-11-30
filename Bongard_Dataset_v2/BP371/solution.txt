@@ -1,1 +1,0 @@
-Net (folding along edges can make a 3D solid) vs. not a net.

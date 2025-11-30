@@ -1,1 +1,0 @@
-Small round object unreachable from the border of the box vs. small round object reachable from the border of the box.

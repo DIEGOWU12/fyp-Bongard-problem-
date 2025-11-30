@@ -1,1 +1,0 @@
-Meta Bongard Problems of the form "[transformation] applied to some examples switch their sorting vs. sorting is invariant under [transformation]" vs. other meta Bongard Problems.

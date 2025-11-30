@@ -1,1 +1,0 @@
-The numbers of dots differ by three vs. not so.

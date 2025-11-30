@@ -1,1 +1,0 @@
-Shape on the right is the convex hull of shape on the left vs. not so.

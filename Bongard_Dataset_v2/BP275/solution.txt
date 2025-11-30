@@ -1,1 +1,0 @@
-Straight line joining the ends does not intersect the object vs. straight line joining the ends intersects the object.

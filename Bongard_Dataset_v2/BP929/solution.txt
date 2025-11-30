@@ -1,1 +1,0 @@
-Bongard Problems about sequences of arbitrary length vs. Bongard Problems about sequences in which all examples have the same sequence length.

@@ -1,1 +1,0 @@
-Bongard Problems in which small changes to examples can switch their sorting vs. Bongard Problems in which examples changed slightly enough remain sorted the same way.

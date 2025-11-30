@@ -1,1 +1,0 @@
-Circle falls by gravity on the right of all other objects if let loose vs. circle falls by gravity on the left of all other objects if let loose.

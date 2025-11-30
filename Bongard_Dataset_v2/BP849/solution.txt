@@ -1,1 +1,0 @@
-Loop is time-symmetrical (loop is like ABCBABCBA... instead of like ABCABCABC...) up to rotation of object vs. not so (neither up to rotation nor reflection).

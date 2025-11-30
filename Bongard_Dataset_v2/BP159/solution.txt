@@ -1,1 +1,0 @@
-Two clusters of 2+3, middle shape must be seen as rectangle (AND only one linelike shape) vs. two clusters of 2+3, middle shape must be seen as piece of straight line (AND more than one linelike shape).

@@ -1,1 +1,0 @@
-Bongard Problems in which all examples have the same format, a specific multi-part structure vs. other Bongard Problems.

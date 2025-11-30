@@ -1,1 +1,0 @@
-The collection of collections obeys the same rule as the individual collections vs. it does not.

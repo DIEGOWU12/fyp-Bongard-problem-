@@ -1,1 +1,0 @@
-All turns are in one direction and rectangular loop exists vs. turns in different directions and no rectangular loop exists.

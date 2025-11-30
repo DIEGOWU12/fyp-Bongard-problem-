@@ -1,1 +1,0 @@
-Ratio of inside to outside identical shapes is constant vs. not so.

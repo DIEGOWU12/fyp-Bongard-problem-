@@ -1,1 +1,0 @@
-Due to pixelation, it is ambiguous whether the middle small shape is a resized version of the left shape or the right shape vs. there is a clear choice.

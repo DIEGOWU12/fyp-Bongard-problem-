@@ -1,1 +1,0 @@
-Solution could appear in a Bongard Problem that has itself as a panel vs. not so.

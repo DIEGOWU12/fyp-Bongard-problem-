@@ -1,1 +1,0 @@
-Dot's position within square is center of square's position within panel vs. not so.

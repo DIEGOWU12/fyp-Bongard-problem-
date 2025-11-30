@@ -1,1 +1,0 @@
-There exists a closed trail that hits each edge exactly once vs. not so.

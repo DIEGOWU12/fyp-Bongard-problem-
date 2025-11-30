@@ -1,1 +1,0 @@
-Shape of black region has as many sides as overall object vs. shape of black region has different number of sides than overall object.

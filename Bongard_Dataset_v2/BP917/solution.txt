@@ -1,1 +1,0 @@
-Reversible transformations vs. non-reversible transformations.

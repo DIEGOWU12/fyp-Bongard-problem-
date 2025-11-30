@@ -1,1 +1,0 @@
-Midpoints are collinear vs. midpoints are not collinear.

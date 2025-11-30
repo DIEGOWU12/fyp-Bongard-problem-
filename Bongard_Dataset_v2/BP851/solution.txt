@@ -1,1 +1,0 @@
-Figure with points (small white circles) can be smoothly deformed within the 2D plane without passing through itself so that all points touch to make the other figure vs. not so (movement out of the plane required).

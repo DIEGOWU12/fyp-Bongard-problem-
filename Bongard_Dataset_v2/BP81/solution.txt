@@ -1,1 +1,0 @@
-Dark figures can be divided from outline figures by a straight line vs. convex hulls of filled and outlined figures overlap.

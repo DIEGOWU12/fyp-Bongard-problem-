@@ -1,1 +1,0 @@
-Angle made by shapes with vertex at square is not acute vs. angle made by shapes with vertex at square is acute.

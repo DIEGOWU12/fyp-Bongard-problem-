@@ -1,1 +1,0 @@
-Squares are either all empty or all contain something vs. not so.

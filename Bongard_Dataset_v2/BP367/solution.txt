@@ -1,1 +1,0 @@
-Center of mass within the black area of the shape vs. center of mass out of the black area of the shape.

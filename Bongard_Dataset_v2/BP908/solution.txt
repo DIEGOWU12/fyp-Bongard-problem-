@@ -1,1 +1,0 @@
-Ordered triplet comparison Bongard Problems vs. unordered triplet comparison Bongard Problems

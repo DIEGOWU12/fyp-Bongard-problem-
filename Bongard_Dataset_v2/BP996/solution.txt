@@ -1,1 +1,0 @@
-Net corresponds to a convex solid vs. net corresponds to a concave solid.

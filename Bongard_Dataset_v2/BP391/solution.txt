@@ -1,1 +1,0 @@
-There exists an edge such that removing it yields two disconnected graphs (i.e., the minimum number of edges whose removal results in two disconnected graphs is 1) vs. the minimum number of edges whose removal results in two disconnected graphs is 2.

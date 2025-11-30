@@ -1,1 +1,0 @@
-Bongard Problems that are hard for humans to solve but easier for computers to solve vs. Bongard Problems that are hard for computers to solve but easier for humans to solve.

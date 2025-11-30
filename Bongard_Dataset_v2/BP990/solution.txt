@@ -1,1 +1,0 @@
-The center of mass can "see" (in straight lines) all points within the shape vs. the center of mass is not located in a region where it can see (in straight lines) all points.

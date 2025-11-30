@@ -1,1 +1,0 @@
-Order is high (low entropy) vs. order is low (high entropy).

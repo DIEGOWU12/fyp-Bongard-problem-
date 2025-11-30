@@ -1,1 +1,0 @@
-Increasing quantity loops back to starting value vs. increasing quantity cannot loop back to starting value.

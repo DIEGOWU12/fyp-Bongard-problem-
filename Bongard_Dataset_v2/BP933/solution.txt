@@ -1,1 +1,0 @@
-Ball will reach edge of bounding box under gravity vs. not so.

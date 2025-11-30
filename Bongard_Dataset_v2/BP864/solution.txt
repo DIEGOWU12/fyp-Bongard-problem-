@@ -1,1 +1,0 @@
-Bongard Problems in which all examples are easy to sort after knowing the solution vs. Bongard Problems in which examples can be hard to sort even after knowing the solution.

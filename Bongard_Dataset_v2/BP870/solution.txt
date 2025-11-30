@@ -1,1 +1,0 @@
-Increasing quantity has upper bound (will get "stopped" by something) vs. not so.

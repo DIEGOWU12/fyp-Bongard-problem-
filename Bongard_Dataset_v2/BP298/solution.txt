@@ -1,1 +1,0 @@
-One of the two small squares is near the lower-right corner vs. one of the two small squares is near the upper-right corner.

@@ -1,1 +1,0 @@
-Black shape is a valid shadow (2D projection) of 3D shape vs. not so.

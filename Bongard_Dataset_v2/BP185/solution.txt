@@ -1,1 +1,0 @@
-Curve with two complex parts vs. curve with three complex parts.

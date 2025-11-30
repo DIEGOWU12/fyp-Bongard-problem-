@@ -1,1 +1,0 @@
-If you place the image on top of itself so that it lines up with itself exactly within a small region, it also lines up everywhere else vs. not so.

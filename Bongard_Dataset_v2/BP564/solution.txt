@@ -1,1 +1,0 @@
-Discrete points intersecting boundary of convex hull vs. connected segment intersecting boundary of convex hull

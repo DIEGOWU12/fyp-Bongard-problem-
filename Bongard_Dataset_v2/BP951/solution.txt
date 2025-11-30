@@ -1,1 +1,0 @@
-Process described leaves some inputs invariant vs. no output will resemble its input.

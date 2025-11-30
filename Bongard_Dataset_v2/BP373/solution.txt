@@ -1,1 +1,0 @@
-Intersection (logical conjunction) vs. union (logical disjunction).

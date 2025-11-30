@@ -1,1 +1,0 @@
-The distance from the center of the line to the bottom of the square is the same as the distance from the dot to the right edge of the square vs. not so.

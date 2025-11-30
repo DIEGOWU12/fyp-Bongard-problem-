@@ -1,1 +1,0 @@
-Image of noisy Bongard Problem vs. image of Bongard Problem with minimal noise.

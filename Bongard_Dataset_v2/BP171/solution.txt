@@ -1,1 +1,0 @@
-Angle bisectors meet at the incenter vs. perpendicular bisectors meet at the orthocenter.

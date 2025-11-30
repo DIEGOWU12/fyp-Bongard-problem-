@@ -1,1 +1,0 @@
-Dots are vertices of a triangle standing on a side vs. dots are vertices of a triangle standing on a vertex.

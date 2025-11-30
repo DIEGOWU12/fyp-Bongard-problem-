@@ -1,1 +1,0 @@
-Closed region is made of curves if flaws are ignored vs. closed region is a polygon if flaws are ignored.

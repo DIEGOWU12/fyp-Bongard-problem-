@@ -1,1 +1,0 @@
-Fractal tiles itself with smaller non-rotated (nor reflected) copies of itself vs. fractal requires turning to tile itself.

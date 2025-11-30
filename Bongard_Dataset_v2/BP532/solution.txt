@@ -1,1 +1,0 @@
-Self-tiling fractal using one size of tile vs. does not tile itself with a single size of itself.

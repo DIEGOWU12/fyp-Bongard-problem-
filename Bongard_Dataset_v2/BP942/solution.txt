@@ -1,1 +1,0 @@
-Square bounding box vs. oblong rectangular bounding box.

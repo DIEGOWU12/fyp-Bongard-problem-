@@ -1,1 +1,0 @@
-Small variance of slopes vs. large variance of slopes.

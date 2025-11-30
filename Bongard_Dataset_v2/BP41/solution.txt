@@ -1,1 +1,0 @@
-Outline circles on one straight line vs. outline circles not on one straight line.

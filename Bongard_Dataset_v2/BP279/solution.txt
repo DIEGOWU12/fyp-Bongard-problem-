@@ -1,1 +1,0 @@
-The left part has more pixels (area) than the right part vs. the left part has fewer pixels than the right part.

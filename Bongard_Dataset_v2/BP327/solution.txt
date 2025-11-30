@@ -1,1 +1,0 @@
-Straight line tangent to curve vs. straight line not tangent to curve.

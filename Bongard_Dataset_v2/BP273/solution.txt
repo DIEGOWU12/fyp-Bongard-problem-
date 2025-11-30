@@ -1,1 +1,0 @@
-Stays put (both when placed on its top and bottom) vs. tumbles (when placed on its bottom).

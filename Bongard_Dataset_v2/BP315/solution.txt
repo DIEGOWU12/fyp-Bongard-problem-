@@ -1,1 +1,0 @@
-One area unreachable by the marked locations vs. all areas reachable by the marked locations.

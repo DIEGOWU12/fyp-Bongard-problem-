@@ -1,1 +1,0 @@
-Visual Bongard Problems such that if black and white are switched some examples switch sides vs. visual Bongard Problems that would always sort two switched versions the same way.

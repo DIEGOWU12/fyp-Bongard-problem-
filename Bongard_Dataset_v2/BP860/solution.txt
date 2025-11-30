@@ -1,1 +1,0 @@
-Finitely many copies of the shape can be arranged such that they are locked together vs. not so.

@@ -1,1 +1,0 @@
-Dots touch each other if and only if no large region touches the edges of the box vs. dots dont touch each other if and only if no large region touches the edges of the box.

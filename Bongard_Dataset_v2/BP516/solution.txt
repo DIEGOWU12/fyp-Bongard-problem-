@@ -1,1 +1,0 @@
-Bongard Problems with a finite number of possible right examples vs. not.

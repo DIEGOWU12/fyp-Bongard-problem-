@@ -1,1 +1,0 @@
-Convex hull elongated vertically vs. convex hull elongated horizontally.

@@ -1,1 +1,0 @@
-All clusters are made of objects of the same texture vs. not all clusters are made of objects of the same texture.

@@ -1,1 +1,0 @@
-Vertices may be partitioned into two sets such that no two vertices in the same set are connected versus not so.

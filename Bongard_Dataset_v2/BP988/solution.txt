@@ -1,1 +1,0 @@
-Number of dots is a power of 2 vs. not so.

@@ -1,1 +1,0 @@
-The shapes in the large square never appear outside of it vs. at least one shape in the large square appears outside of it.

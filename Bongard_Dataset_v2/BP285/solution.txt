@@ -1,1 +1,0 @@
-The centers (barycenters) of the objects are collinear vs. the centers (barycenters) of the objects are not collinear.

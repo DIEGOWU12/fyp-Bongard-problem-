@@ -1,1 +1,0 @@
-Even number of white regions vs. odd number of white regions.

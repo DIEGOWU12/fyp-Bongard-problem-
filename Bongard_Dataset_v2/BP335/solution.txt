@@ -1,1 +1,0 @@
-Tessellates the plane vs. does not tessellate the plane.

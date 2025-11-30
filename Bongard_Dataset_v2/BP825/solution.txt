@@ -1,1 +1,0 @@
-Ticks mark an infinite sequence of angles on circle such that each angle is the double of the subsequent angle in the sequence (angle measured from rightmost indicated point) vs. not so.

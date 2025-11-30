@@ -1,1 +1,0 @@
-Transitive vs. non-transitive relations between the red and blue circles.

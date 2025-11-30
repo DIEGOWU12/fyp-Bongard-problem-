@@ -1,1 +1,0 @@
-Bottom object in front of top objects in 3-D vs. bottom object behind top objects in 3-D.

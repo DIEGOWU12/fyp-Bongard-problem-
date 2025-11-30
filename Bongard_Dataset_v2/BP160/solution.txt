@@ -1,1 +1,0 @@
-Quadrilateral that is nearly a triangle vs. typical quadrilateral.

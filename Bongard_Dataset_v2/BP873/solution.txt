@@ -1,1 +1,0 @@
-Solution involves discrete quantity vs. solution involves continuous quantity.

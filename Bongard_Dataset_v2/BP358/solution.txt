@@ -1,1 +1,0 @@
-The circles will collide if the arrows are their velocities vs. the circles will not collide if the arrows are their velocities.

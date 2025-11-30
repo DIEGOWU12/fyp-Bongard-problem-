@@ -1,1 +1,0 @@
-Triangle points to center of circle vs. triangle does not point to center of circle.

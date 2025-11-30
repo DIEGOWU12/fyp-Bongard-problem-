@@ -1,1 +1,0 @@
-Low contrast (no fully black region) vs. high contrast (at least one fully black region).

@@ -1,1 +1,0 @@
-Palindromes vs. not palindromes.

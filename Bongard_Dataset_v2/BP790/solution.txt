@@ -1,1 +1,0 @@
-The leftmost two add (as vectors) to the right versus no two add to a third.

@@ -1,1 +1,0 @@
-Net corresponds to a solid that can tessellate 3D space vs. net does not correspond to a solid that can tessellate 3D space.

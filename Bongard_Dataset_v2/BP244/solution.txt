@@ -1,1 +1,0 @@
-Scanning left-to-right, top-to-bottom, each filled box is separated from the next filled box by the same number of empty boxes vs. not so.

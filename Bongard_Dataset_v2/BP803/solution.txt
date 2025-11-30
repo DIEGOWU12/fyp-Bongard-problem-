@@ -1,1 +1,0 @@
-Image of Bongard Problem such that rotating by a half-turn leaves the solution invariant versus not so.

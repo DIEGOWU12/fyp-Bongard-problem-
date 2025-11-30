@@ -1,1 +1,0 @@
-Regions in drawing (ignore background) can be coloured using three or fewer colours such that no adjacent regions are coloured the same colour vs. four colours are required.

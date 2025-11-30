@@ -1,1 +1,0 @@
-High approximate similarity vs. lower approximate similarity.

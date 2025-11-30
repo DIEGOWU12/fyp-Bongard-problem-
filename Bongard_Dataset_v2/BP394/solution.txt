@@ -1,1 +1,0 @@
-For each colored square only, there exists a path starting on it that covers each square of the figure exactly once vs. there is no path that starts on a colored square and covers each square of the figure exactly once.

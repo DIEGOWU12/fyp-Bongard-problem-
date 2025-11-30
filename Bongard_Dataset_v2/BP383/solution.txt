@@ -1,1 +1,0 @@
-When the shape is removed from the dots, the dots give enough information to place the shape back where it was vs. not so.

@@ -1,1 +1,0 @@
-Ball touches curve at a point of local minimum downwards vs. ball touches curve at a point of local maximum upwards.

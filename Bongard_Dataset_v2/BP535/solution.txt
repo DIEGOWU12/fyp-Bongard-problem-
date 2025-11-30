@@ -1,1 +1,0 @@
-Visual Bongard Problems such that flipping over the vertical axis (left/right) can switch an example's side vs. visual Bongard Problems whose examples' sorting doesn't change under such a transformation.

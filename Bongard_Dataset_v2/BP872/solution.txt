@@ -1,1 +1,0 @@
-A rotation can switch an object's sorting vs. not so.

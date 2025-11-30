@@ -1,1 +1,0 @@
-The numbers of dots can be put into a sequence of consecutive numbers vs. not so.

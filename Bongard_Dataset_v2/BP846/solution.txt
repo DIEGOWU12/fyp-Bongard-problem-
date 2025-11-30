@@ -1,1 +1,0 @@
-A quantity increases by fixed constant amount each step vs. not so.

@@ -1,1 +1,0 @@
-Jigsaw puzzle pieces can be assembled into a square vs. jigsaw puzzle pieces cannot be assembled into a square.

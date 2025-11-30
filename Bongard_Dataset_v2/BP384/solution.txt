@@ -1,1 +1,0 @@
-Square number of dots vs. non-square number of dots.

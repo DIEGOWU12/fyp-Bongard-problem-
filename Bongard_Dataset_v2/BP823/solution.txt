@@ -1,1 +1,0 @@
-Conic section (plot of solution to conic equation) vs. not so.

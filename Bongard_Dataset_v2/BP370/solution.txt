@@ -1,1 +1,0 @@
-Gluing sides with the same symbols makes a sphere vs. gluing sides with the same symbols makes a torus.

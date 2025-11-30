@@ -1,1 +1,0 @@
-Concave if proximal border points are connected vs. convex if proximal border points are connected.

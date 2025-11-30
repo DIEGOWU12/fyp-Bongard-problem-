@@ -1,1 +1,0 @@
-Two clusters of different numbers of elements vs. two clusters of equal number of elements.

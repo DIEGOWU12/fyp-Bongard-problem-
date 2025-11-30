@@ -1,1 +1,0 @@
-Lower shape can be used as a tile to build the upper one vs. not so.

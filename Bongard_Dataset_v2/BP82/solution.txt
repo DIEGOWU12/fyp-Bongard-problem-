@@ -1,1 +1,0 @@
-The convex hull of the crosses forms an equilateral triangle vs. the convex hull of the crosses does not form an equilateral triangle.

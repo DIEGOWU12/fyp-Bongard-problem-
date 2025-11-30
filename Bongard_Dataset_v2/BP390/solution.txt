@@ -1,1 +1,0 @@
-Each graph vertex is uniquely defined by its connections (the graph does not admit nontrivial automorphisms) vs. the graph admits nontrivial automorphisms.

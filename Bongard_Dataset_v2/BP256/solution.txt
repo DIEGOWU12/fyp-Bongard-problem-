@@ -1,1 +1,0 @@
-Each large circle closer to a small circle than a large one, and each small circle closer to a large one than a small one vs. not so.

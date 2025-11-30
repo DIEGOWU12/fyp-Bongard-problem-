@@ -1,1 +1,0 @@
-Representationally uniform vs. representationally non-uniform.
