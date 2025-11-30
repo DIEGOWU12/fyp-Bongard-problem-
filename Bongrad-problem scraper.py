@@ -11,8 +11,8 @@ from urllib.parse import urljoin # 用于拼接相对URL
 # 1. 设置目标和参数
 # ====================================================================
 BASE_URL = "https://oebp.org/BP"
-START_ID = 301  # 目标爬取 BP301 到 BP600
-END_ID = 1000  # 目标爬取 BP301 到 BP1000
+START_ID = 1  
+END_ID = 3000  # 目标爬取 BP1 到 BP3000
 OUTPUT_DIR = "Bongard_Dataset_v2"
 SOLUTION_FILE = os.path.join(OUTPUT_DIR, "solutions_and_images.csv")
 
