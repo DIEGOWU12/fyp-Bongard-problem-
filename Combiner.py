@@ -7,7 +7,7 @@ import textwrap
 # ====================================================================
 OUTPUT_DIR = "Bongard_Dataset_v2"
 START_ID = 1
-END_ID = 300 # 目标合并的 BP 编号范围
+END_ID = 1000 # 目标合并的 BP 编号范围
 
 # --- 布局常量 ---
 # Bongard Problem 的经典布局是 左右两组，每组 3 行 x 2 列
