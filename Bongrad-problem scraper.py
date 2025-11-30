@@ -93,41 +93,40 @@ def fetch_bongard_problem(bp_id):
             return None
 
         soup = BeautifulSoup(response.text, 'html.parser')
-        # 新增一个字段用于 TXT 文件的保存路径
+
         data = {'BP_ID': f"BP{bp_id}", 'solution': '未找到解决方案文本', 'image_paths': [], 'txt_path': ''}
-        
-        # 3. 提取文字描述 (解决方案)
+
+        # 3. 提取解决方案文本
         solution_text = "未找到解决方案文本"
-        
         bp_link_tag = soup.find('a', href=f'/{data["BP_ID"]}', string=data["BP_ID"])
 
         if bp_link_tag:
             solution_tr_inner = bp_link_tag.find_parent('tr')
-            
             if solution_tr_inner:
                 td_list = solution_tr_inner.find_all('td')
-                
                 if len(td_list) >= 3:
-                    solution_td = td_list[2]
-                    solution_text = solution_td.get_text(strip=True)
+                    solution_text = td_list[2].get_text(strip=True)
 
         data['solution'] = solution_text
-        
-        # ***** 关键修改：将 solution 文本保存到 TXT 文件 *****
         data['txt_path'] = save_solution_to_txt(bp_id, solution_text)
-        
-        # 4. 提取和下载图片链接
+
+        # 4. 提取图片
         img_tags = soup.find_all('img', src=lambda src: src and '/examples/' in src)
-        
+
+        # 🔥 新增：筛选条件 —— 只要 12 张图的 BP
+        if len(img_tags) != 12:
+            print(f"BP{bp_id} 图片数量 = {len(img_tags)}（≠ 12），跳过。")
+            return None
+
+        # 下载 12 张图
         image_paths = []
-        if img_tags:
-            for index, img_tag in enumerate(img_tags):
-                img_src = img_tag['src']
-                img_url = urljoin("https://oebp.org", img_src)
-                filename = os.path.basename(img_src)
-                path = download_and_save_image(img_url, filename, bp_id)
-                image_paths.append(path)
-                
+        for img_tag in img_tags:
+            img_src = img_tag['src']
+            img_url = urljoin("https://oebp.org", img_src)
+            filename = os.path.basename(img_src)
+            path = download_and_save_image(img_url, filename, bp_id)
+            image_paths.append(path)
+
         data['image_paths'] = image_paths
 
         return data
@@ -135,6 +134,7 @@ def fetch_bongard_problem(bp_id):
     except requests.exceptions.RequestException as e:
         print(f"请求 {url} 时发生错误: {e}")
         return None
+
 
 # ====================================================================
 # 5. 主爬取循环和数据保存
