@@ -1,0 +1,13 @@
+BP_ID,solution,solution_txt_path,Image_1_path,Image_2_path,Image_3_path,Image_4_path,Image_5_path,Image_6_path,Image_7_path,Image_8_path,Image_9_path,Image_10_path,Image_11_path,Image_12_path
+BP2,Big vs. small.,BP2\solution.txt,BP2\8.png,BP2\9.png,BP2\10.png,BP2\11.png,BP2\12.png,BP2\13.png,BP2\14.png,BP2\15.png,BP2\16.png,BP2\17.png,BP2\18.png,BP2\19.png
+BP3,Hollow outline vs. filled in solid.,BP3\solution.txt,BP3\20.png,BP3\21.png,BP3\22.png,BP3\23.png,BP3\24.png,BP3\25.png,BP3\26.png,BP3\27.png,BP3\28.png,BP3\29.png,BP3\30.png,BP3\31.png
+BP4,Convex vs. concave.,BP4\solution.txt,BP4\32.png,BP4\33.png,BP4\34.png,BP4\35.png,BP4\36.png,BP4\37.png,BP4\38.png,BP4\39.png,BP4\40.png,BP4\41.png,BP4\42.png,BP4\43.png
+BP5,Is polygon vs. is smooth without straight lines or corners.,BP5\solution.txt,BP5\44.png,BP5\45.png,BP5\46.png,BP5\47.png,BP5\48.png,BP5\49.png,BP5\50.png,BP5\51.png,BP5\52.png,BP5\53.png,BP5\54.png,BP5\55.png
+BP6,Triangle vs. quadrilateral.,BP6\solution.txt,BP6\56.png,BP6\57.png,BP6\58.png,BP6\59.png,BP6\60.png,BP6\61.png,BP6\62.png,BP6\63.png,BP6\64.png,BP6\65.png,BP6\66.png,BP6\67.png
+BP7,Taller than wide vs. wider than tall.,BP7\solution.txt,BP7\68.png,BP7\69.png,BP7\70.png,BP7\71.png,BP7\72.png,BP7\73.png,BP7\74.png,BP7\75.png,BP7\76.png,BP7\77.png,BP7\78.png,BP7\79.png
+BP8,Positioned right vs. positioned left.,BP8\solution.txt,BP8\80.png,BP8\81.png,BP8\82.png,BP8\83.png,BP8\84.png,BP8\85.png,BP8\86.png,BP8\87.png,BP8\88.png,BP8\89.png,BP8\90.png,BP8\91.png
+BP9,Non-wiggly outline vs. wiggly outline.,BP9\solution.txt,BP9\92.png,BP9\93.png,BP9\94.png,BP9\95.png,BP9\96.png,BP9\97.png,BP9\98.png,BP9\99.png,BP9\100.png,BP9\101.png,BP9\102.png,BP9\103.png
+BP10,Approximately triangular outline vs. approximately convex quadrilateral outline.,BP10\solution.txt,BP10\104.png,BP10\105.png,BP10\106.png,BP10\107.png,BP10\108.png,BP10\109.png,BP10\110.png,BP10\111.png,BP10\112.png,BP10\113.png,BP10\114.png,BP10\115.png
+BP11,Thin and elongated vs. compact.,BP11\solution.txt,BP11\116.png,BP11\117.png,BP11\118.png,BP11\119.png,BP11\120.png,BP11\121.png,BP11\122.png,BP11\123.png,BP11\124.png,BP11\125.png,BP11\126.png,BP11\127.png
+BP12,Thin elongated convex hull vs. compact convex hull.,BP12\solution.txt,BP12\128.png,BP12\129.png,BP12\130.png,BP12\131.png,BP12\132.png,BP12\133.png,BP12\134.png,BP12\135.png,BP12\136.png,BP12\137.png,BP12\138.png,BP12\139.png
+BP13,Tall rectangle OR wide ellipse vs. wide rectangle OR tall ellipse.,BP13\solution.txt,BP13\140.png,BP13\141.png,BP13\142.png,BP13\143.png,BP13\144.png,BP13\145.png,BP13\146.png,BP13\147.png,BP13\148.png,BP13\149.png,BP13\150.png,BP13\151.png
