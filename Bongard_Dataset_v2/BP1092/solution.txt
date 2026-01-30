@@ -1,0 +1,1 @@
+Has element-wise 180 degree rotational symmetry vs. does not.

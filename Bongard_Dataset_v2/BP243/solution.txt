@@ -1,0 +1,1 @@
+Triangle closer to box corner than any of the circles vs. not so.

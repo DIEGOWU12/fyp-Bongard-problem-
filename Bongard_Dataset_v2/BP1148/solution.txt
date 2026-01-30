@@ -1,0 +1,1 @@
+Number of dots in the Nth box (from the left) is how many times the number (N - 1) appears in the whole diagram vs. not so.

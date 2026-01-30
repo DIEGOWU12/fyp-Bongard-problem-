@@ -1,0 +1,1 @@
+Circled points are all possible vertices an equilateral triangle with a particular side length can take, provided that each of its corners lie on a grid point vs. not so.

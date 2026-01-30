@@ -1,0 +1,1 @@
+Columns of the table could be respectively labeled "Number" and "Number of times number appears in this table" vs. not so.

@@ -1,0 +1,1 @@
+Triangular number of dots vs. non-triangular number of dots

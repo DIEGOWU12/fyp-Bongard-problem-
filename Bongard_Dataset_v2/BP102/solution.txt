@@ -1,0 +1,1 @@
+Internal arrows point outward vs. internal arrows point inward.

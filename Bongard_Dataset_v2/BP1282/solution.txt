@@ -1,0 +1,1 @@
+If two players take turns moving moving the black circles with the intention of capturing their opponent's piece, one can always "checkmate" the other vs. the game results in a draw if the players play optimally.

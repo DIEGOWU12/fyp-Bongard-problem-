@@ -1,0 +1,1 @@
+Line perpendicular to one side of the object vs. line parallel to one side of the object.

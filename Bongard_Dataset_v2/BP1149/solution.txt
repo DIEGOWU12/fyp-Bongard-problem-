@@ -1,0 +1,1 @@
+Number in the Nth box (from the left) is how many numbers appear N times vs. not so.

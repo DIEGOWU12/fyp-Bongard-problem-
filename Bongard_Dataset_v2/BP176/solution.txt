@@ -1,0 +1,1 @@
+Line that connects dots avoiding obstacles is short vs. line that connects dots avoiding obstacles is long.

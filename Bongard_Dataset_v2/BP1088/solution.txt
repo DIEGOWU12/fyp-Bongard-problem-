@@ -1,0 +1,1 @@
+Top piece can fit into bottom piece without leaving any overhangs vs. not so

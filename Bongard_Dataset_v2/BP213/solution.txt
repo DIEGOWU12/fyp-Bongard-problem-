@@ -1,0 +1,1 @@
+The tightest-curved section, out of all sections of curve that make a complete turn (360 degrees), contains an x-crossing point vs. not so.

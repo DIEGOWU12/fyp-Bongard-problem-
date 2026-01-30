@@ -1,0 +1,1 @@
+A vertical line may pass through both objects vs. no such line exists

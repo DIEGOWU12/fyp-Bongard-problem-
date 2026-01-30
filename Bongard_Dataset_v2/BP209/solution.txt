@@ -1,0 +1,1 @@
+No objects are centered at the center of the box vs. one object is centered at the center of the box.

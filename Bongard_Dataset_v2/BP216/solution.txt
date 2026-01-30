@@ -1,0 +1,1 @@
+Ink tip (non-homogeneous line) vs. Marker tip (homogeneous line).

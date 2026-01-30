@@ -1,0 +1,1 @@
+Maze object features multiple branching paths vs. one path in maze object.

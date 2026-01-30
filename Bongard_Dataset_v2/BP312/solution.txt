@@ -1,0 +1,1 @@
+Lines intersect within the box vs. lines intersect out of the box.

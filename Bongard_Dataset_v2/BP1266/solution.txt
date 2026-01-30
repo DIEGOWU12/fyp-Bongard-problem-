@@ -1,0 +1,1 @@
+Angles either only increase or only decrease as one moves along the curve vs. not so.

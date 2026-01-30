@@ -4,120 +4,112 @@ import time
 import random
 import os
 import csv
-from urllib.parse import urljoin # 用于拼接相对URL
-# ====================================================================
+from urllib.parse import urljoin
+from concurrent.futures import ThreadPoolExecutor
+from requests.adapters import HTTPAdapter
+from urllib3.util.retry import Retry
 
 # ====================================================================
 # 1. 设置目标和参数
 # ====================================================================
 BASE_URL = "https://oebp.org/BP"
 START_ID = 1  
-END_ID = 3000  # 目标爬取 BP1 到 BP3000
+END_ID = 3000  
 OUTPUT_DIR = "Bongard_Dataset_v2"
 SOLUTION_FILE = os.path.join(OUTPUT_DIR, "solutions_and_images.csv")
+MAX_WORKERS = 7  # 并发线程数，建议 5-10，不要太高以免被封
 
-# 2. 创建输出目录
-if not os.path.exists(OUTPUT_DIR):
-    os.makedirs(OUTPUT_DIR)
-    print(f"创建目录: {OUTPUT_DIR}")
-
+# 初始化 Session 提高连接效率
+session = requests.Session()
 HEADERS = {
     "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.124 Safari/537.36"
 }
+retry_strategy = Retry(
+    total=3,                          # 最大重试次数
+    backoff_factor=1,                 # 间隔时间系数 (1s, 2s, 4s...)
+    status_forcelist=[429, 500, 502, 503, 504], # 遇到这些状态码才重试
+)
+
+adapter = HTTPAdapter(max_retries=retry_strategy)
+session.mount("https://", adapter)
+session.mount("http://", adapter)
+session.headers.update(HEADERS)
+
+# 创建输出目录
+if not os.path.exists(OUTPUT_DIR):
+    os.makedirs(OUTPUT_DIR)
 
 # ====================================================================
-# 新增：TXT 文件保存函数
+# 2. 辅助函数
 # ====================================================================
-def save_solution_to_txt(bp_id, solution_text):
-    """将解决方案文本保存到 BPID 对应的子文件夹中"""
-    bp_dir = os.path.join(OUTPUT_DIR, f"BP{bp_id}")
-    if not os.path.exists(bp_dir):
-        os.makedirs(bp_dir)
-        
-    txt_path = os.path.join(bp_dir, "solution.txt")
-    
-    try:
-        # 以 utf-8 编码写入文本文件
-        with open(txt_path, 'w', encoding='utf-8') as f:
-            f.write(solution_text)
-        # 返回相对路径，用于CSV中的记录（可选）
-        return os.path.join(f"BP{bp_id}", "solution.txt")
-    except Exception as e:
-        print(f"写入 BP{bp_id} 的 TXT 文件时发生错误: {e}")
-        return "TXT 写入失败"
 
-
-# ====================================================================
-# 下载函数 (保持不变)
-# ====================================================================
 def download_and_save_image(img_url, filename, bp_id):
-    """下载单个图片并保存到子目录"""
-    # 确保保存到 BPID 对应的子文件夹
+    """下载图片"""
     bp_dir = os.path.join(OUTPUT_DIR, f"BP{bp_id}")
     if not os.path.exists(bp_dir):
         os.makedirs(bp_dir)
         
     image_path = os.path.join(bp_dir, filename)
-    
-    # 检查文件是否已存在，避免重复下载（可选优化）
     if os.path.exists(image_path):
-         return os.path.join(f"BP{bp_id}", filename)
+        return os.path.join(f"BP{bp_id}", filename)
 
     try:
-        img_response = requests.get(img_url, headers=HEADERS, timeout=10)
+        img_response = session.get(img_url, timeout=10)
         if img_response.status_code == 200:
             with open(image_path, 'wb') as f:
                 f.write(img_response.content)
-            return os.path.join(f"BP{bp_id}", filename) # 返回相对路径 for CSV
-        else:
-            return f"下载失败 (状态码: {img_response.status_code})"
-    except Exception as e:
-        return f"下载图片时发生错误: {e}"
+            return os.path.join(f"BP{bp_id}", filename)
+    except Exception:
+        pass
+    return "下载失败"
 
-# ====================================================================
-# 核心数据抓取函数 (解决方案定位已优化)
-# ====================================================================
-def fetch_bongard_problem(bp_id):
-    url = f"{BASE_URL}{bp_id}"
-    print(f"正在处理: {url}")
-
+def save_solution_to_txt(bp_id, solution_text):
+    """保存文本"""
+    bp_dir = os.path.join(OUTPUT_DIR, f"BP{bp_id}")
+    if not os.path.exists(bp_dir):
+        os.makedirs(bp_dir)
+        
+    txt_path = os.path.join(bp_dir, "solution.txt")
     try:
-        response = requests.get(url, headers=HEADERS, timeout=10)
+        with open(txt_path, 'w', encoding='utf-8') as f:
+            f.write(solution_text)
+        return os.path.join(f"BP{bp_id}", "solution.txt")
+    except Exception:
+        return "写入失败"
+
+# ====================================================================
+# 3. 核心抓取逻辑
+# ====================================================================
+
+def fetch_bongard_problem(bp_id):
+    """爬取单个问题的核心逻辑"""
+    url = f"{BASE_URL}{bp_id}"
+    try:
+        response = session.get(url, timeout=10)
         if response.status_code != 200:
             return None
 
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        # 1. 先提取图片标签，进行校验
+        # --- 步骤 1: 先找图片并校验数量 (核心修复点) ---
         img_tags = soup.find_all('img', src=lambda src: src and '/examples/' in src)
-        
-        # 🔥 关键修改：如果不等于 12 张，直接在这里退出，此时还没创建任何文件夹
         if len(img_tags) != 12:
-            print(f"BP{bp_id} 图片数量 = {len(img_tags)}（≠ 12），跳过。")
+            # 图片不足 12 张，直接退出，不创建文件夹
             return None
 
-        # 2. 校验通过后，再提取解决方案文本
+        # --- 步骤 2: 校验通过，提取文本 ---
         solution_text = "未找到解决方案文本"
         bp_link_tag = soup.find('a', href=f'/BP{bp_id}', string=f'BP{bp_id}')
         if bp_link_tag:
-            solution_tr_inner = bp_link_tag.find_parent('tr')
-            if solution_tr_inner:
-                td_list = solution_tr_inner.find_all('td')
-                if len(td_list) >= 3:
-                    solution_text = td_list[2].get_text(strip=True)
+            tr = bp_link_tag.find_parent('tr')
+            if tr:
+                tds = tr.find_all('td')
+                if len(tds) >= 3:
+                    solution_text = tds[2].get_text(strip=True)
 
-        # 3. 校验通过后，才开始创建文件夹和保存数据
-        data = {
-            'BP_ID': f"BP{bp_id}", 
-            'solution': solution_text, 
-            'image_paths': [], 
-            'txt_path': ''
-        }
-
-        # 只有确定要这一组数据了，才调用保存函数
-        data['txt_path'] = save_solution_to_txt(bp_id, solution_text)
-
-        # 下载图片
+        # --- 步骤 3: 开始写入磁盘 ---
+        txt_path = save_solution_to_txt(bp_id, solution_text)
+        
         image_paths = []
         for img_tag in img_tags:
             img_src = img_tag['src']
@@ -126,52 +118,51 @@ def fetch_bongard_problem(bp_id):
             path = download_and_save_image(img_url, filename, bp_id)
             image_paths.append(path)
 
-        data['image_paths'] = image_paths
-        return data
+        # 模拟一点点延迟，防止给服务器太大压力
+        time.sleep(random.uniform(1, 2))
+
+        print(f"✅ BP{bp_id} 处理成功")
+        return {
+            'BP_ID': f"BP{bp_id}",
+            'solution': solution_text,
+            'solution_txt_path': txt_path,
+            'image_paths': image_paths
+        }
 
     except Exception as e:
-        print(f"请求 {url} 时发生错误: {e}")
+        print(f"❌ BP{bp_id} 错误: {e}")
         return None
 
 # ====================================================================
-# 5. 主爬取循环和数据保存
+# 4. 执行多线程任务
 # ====================================================================
-# 创建 CSV 文件并写入标题
-# CSV 字段中新增 'solution_txt_path' 字段
-with open(SOLUTION_FILE, 'w', newline='', encoding='utf-8') as f:
-    fieldnames = ['BP_ID', 'solution', 'solution_txt_path'] + [f'Image_{i+1}_path' for i in range(12)]
-    writer = csv.DictWriter(f, fieldnames=fieldnames)
-    writer.writeheader()
 
-    for i in range(START_ID, END_ID + 1):
-        try:
-            result = fetch_bongard_problem(i)
-        except Exception as e:
-            print(f"处理 BP{i} 时发生未知错误: {e}. 跳过.")
-            result = None
+if __name__ == "__main__":
+    print(f"🚀 开始爬取任务，线程数: {MAX_WORKERS}...")
+    
+    with open(SOLUTION_FILE, 'w', newline='', encoding='utf-8') as f:
+        fieldnames = ['BP_ID', 'solution', 'solution_txt_path'] + [f'Image_{i+1}_path' for i in range(12)]
+        writer = csv.DictWriter(f, fieldnames=fieldnames)
+        writer.writeheader()
 
-        if result:
-            # 准备要写入 CSV 的字典行
-            row = {
-                'BP_ID': result['BP_ID'], 
-                'solution': result['solution'], 
-                'solution_txt_path': result['txt_path']
-            }
+        # 使用线程池加速
+        with ThreadPoolExecutor(max_workers=MAX_WORKERS) as executor:
+            # 提交所有任务
+            future_to_bp = {executor.submit(fetch_bongard_problem, i): i for i in range(START_ID, END_ID + 1)}
             
-            # 填充图片路径
-            for j in range(12):
-                row[f'Image_{j+1}_path'] = result['image_paths'][j] if j < len(result['image_paths']) else ''
+            for future in future_to_bp:
+                result = future.result()
+                if result:
+                    # 准备 CSV 行数据
+                    row = {
+                        'BP_ID': result['BP_ID'],
+                        'solution': result['solution'],
+                        'solution_txt_path': result['solution_txt_path']
+                    }
+                    for j in range(12):
+                        row[f'Image_{j+1}_path'] = result['image_paths'][j] if j < len(result['image_paths']) else ''
+                    
+                    writer.writerow(row)
+                    f.flush()  # 实时刷入硬盘，防止丢失
 
-            writer.writerow(row)
-            
-            print("--- 爬取成功 ---")
-            print(f"BP{i} 描述: {result['solution']}")
-            print(f"BP{i} TXT 文件已保存到: {result['txt_path']}")
-            print(f"BP{i} 已下载 {len(result['image_paths'])} 张图片到 {os.path.join(OUTPUT_DIR, f'BP{i}')}/")
-            print("----------------\n")
-            
-        # 6. 设置爬取延迟
-        sleep_time = random.uniform(3, 7) # 随机等待 3 到 7 秒
-        time.sleep(sleep_time)
-
-print(f"所有任务完成。数据保存在 {SOLUTION_FILE}，图片和 TXT 文件按 BPID 分文件夹保存在 {OUTPUT_DIR}/")
+    print(f"\n✨ 任务完成！结果保存在: {SOLUTION_FILE}")

@@ -1,0 +1,1 @@
+Any permutation of positions that sends one string of symbols to another sends each string of symbols to some other versus not so.

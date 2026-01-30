@@ -1,0 +1,1 @@
+Dots are in tight clusters around convex vertices vs. dots are spread around.

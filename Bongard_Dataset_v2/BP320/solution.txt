@@ -1,0 +1,1 @@
+The numbers of dots in the two clusters are approximately equal (log scale) vs. the numbers of dots in the two clusters differ a lot.

@@ -1,0 +1,1 @@
+Only vertical or horizontal lines vs. neither vertical nor horizontal lines.

@@ -1,0 +1,1 @@
+The order in which the objects in the top half are combined to make the object in the lower half matters vs. not so.

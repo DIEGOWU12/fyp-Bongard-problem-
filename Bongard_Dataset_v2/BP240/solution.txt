@@ -1,0 +1,1 @@
+Straight line joining the curve ends does not cut the curve vs. straight line joining the curve ends intersects the curve.

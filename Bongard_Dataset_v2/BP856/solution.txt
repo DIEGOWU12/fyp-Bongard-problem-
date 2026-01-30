@@ -1,0 +1,1 @@
+Compound shape would hit the dot if rotated vs. not so.

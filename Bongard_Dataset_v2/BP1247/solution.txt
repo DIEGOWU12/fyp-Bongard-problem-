@@ -1,0 +1,1 @@
+No straight path from one side of the panel to the other passes through the grey shape without hitting a black region vs. such a path exists.

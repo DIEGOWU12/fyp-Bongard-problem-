@@ -1,0 +1,1 @@
+White dot is at center of mass vs. white dot is not at center of mass.

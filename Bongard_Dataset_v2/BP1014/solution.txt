@@ -1,0 +1,1 @@
+Shapes become thicker the farther they are from the top-left and bottom-right corners of bounding box vs. some other pattern in shape thickness based on position.

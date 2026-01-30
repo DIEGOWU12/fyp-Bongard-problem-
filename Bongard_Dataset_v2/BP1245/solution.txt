@@ -1,0 +1,1 @@
+When two players alternate coloring regions, either can force connection from top edge to bottom edge vs. either can force connection from left edge to right edge.

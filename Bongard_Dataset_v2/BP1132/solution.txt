@@ -1,0 +1,1 @@
+Circle that passes through points is contained within bounding box vs. not so.
