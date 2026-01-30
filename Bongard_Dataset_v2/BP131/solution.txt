@@ -1,0 +1,1 @@
+Dots are vertices of a parallelogram vs. dots are not vertices of a parallelogram.

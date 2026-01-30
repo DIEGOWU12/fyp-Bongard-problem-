@@ -1,0 +1,1 @@
+Different ways of grouping yield same 4-1 split vs. different ways of grouping yield different 4-1 splits.
