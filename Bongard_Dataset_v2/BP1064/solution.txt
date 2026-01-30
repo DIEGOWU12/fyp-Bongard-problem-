@@ -1,0 +1,1 @@
+Each large shape is made up of small shapes which are the same shape as the other large shape  vs. not so
