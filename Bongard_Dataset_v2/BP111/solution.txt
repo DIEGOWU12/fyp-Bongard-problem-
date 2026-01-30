@@ -1,1 +1,0 @@
-Middle shape is a triangle vs. middle shape is not a triangle.

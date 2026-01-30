@@ -1,1 +1,0 @@
-Is polygon vs. is smooth without straight lines or corners.

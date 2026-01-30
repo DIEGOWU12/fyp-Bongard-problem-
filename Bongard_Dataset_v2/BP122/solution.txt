@@ -1,1 +1,0 @@
-Line divides interior into two regions vs. not so.

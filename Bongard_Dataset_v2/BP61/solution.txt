@@ -1,1 +1,0 @@
-A line separates the crosses in half vs. a line does not separate the crosses in half.

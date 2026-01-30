@@ -1,1 +1,0 @@
-Two clusters of three and two that are adjacent vs. two clusters of three and two that are not adjacent.

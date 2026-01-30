@@ -1,1 +1,0 @@
-No dot well within the convex hull vs. at least one dot well within the convex hull.

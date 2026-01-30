@@ -1,1 +1,0 @@
-X-coordinates of dots are equidistant vs. y-coordinates of dots are equidistant.

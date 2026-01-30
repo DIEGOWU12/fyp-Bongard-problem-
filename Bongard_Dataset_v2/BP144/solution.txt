@@ -1,1 +1,0 @@
-Two clusters of three and two: different features (including clustering) yield different 3-2 splits vs. two clusters of three and two: different features yield the same 3-2 split.

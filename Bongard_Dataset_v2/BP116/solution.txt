@@ -1,1 +1,0 @@
-Polygon stands on side vs. polygon stands on vertex.

@@ -1,1 +1,0 @@
-A curve with one self-crossing vs. a curve without a self-crossing.

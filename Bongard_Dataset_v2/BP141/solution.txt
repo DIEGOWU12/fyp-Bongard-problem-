@@ -1,1 +1,0 @@
-Two clusters of three and two objects each vs. one cluster of three objects and two different objects.
