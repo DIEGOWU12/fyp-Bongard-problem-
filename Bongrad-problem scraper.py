@@ -78,28 +78,27 @@ def download_and_save_image(img_url, filename, bp_id):
 # 核心数据抓取函数 (解决方案定位已优化)
 # ====================================================================
 def fetch_bongard_problem(bp_id):
-    """根据 ID 爬取单个 Bongard Problem 的数据"""
     url = f"{BASE_URL}{bp_id}"
     print(f"正在处理: {url}")
 
     try:
         response = requests.get(url, headers=HEADERS, timeout=10)
-        
-        if response.status_code == 404:
-             print(f"警告: BP{bp_id} 页面不存在 (404 Not Found)。跳过。")
-             return None
-        elif response.status_code != 200:
-            print(f"错误: 访问 {url} 失败，状态码: {response.status_code}")
+        if response.status_code != 200:
             return None
 
         soup = BeautifulSoup(response.text, 'html.parser')
 
-        data = {'BP_ID': f"BP{bp_id}", 'solution': '未找到解决方案文本', 'image_paths': [], 'txt_path': ''}
+        # 1. 先提取图片标签，进行校验
+        img_tags = soup.find_all('img', src=lambda src: src and '/examples/' in src)
+        
+        # 🔥 关键修改：如果不等于 12 张，直接在这里退出，此时还没创建任何文件夹
+        if len(img_tags) != 12:
+            print(f"BP{bp_id} 图片数量 = {len(img_tags)}（≠ 12），跳过。")
+            return None
 
-        # 3. 提取解决方案文本
+        # 2. 校验通过后，再提取解决方案文本
         solution_text = "未找到解决方案文本"
-        bp_link_tag = soup.find('a', href=f'/{data["BP_ID"]}', string=data["BP_ID"])
-
+        bp_link_tag = soup.find('a', href=f'/BP{bp_id}', string=f'BP{bp_id}')
         if bp_link_tag:
             solution_tr_inner = bp_link_tag.find_parent('tr')
             if solution_tr_inner:
@@ -107,18 +106,18 @@ def fetch_bongard_problem(bp_id):
                 if len(td_list) >= 3:
                     solution_text = td_list[2].get_text(strip=True)
 
-        data['solution'] = solution_text
+        # 3. 校验通过后，才开始创建文件夹和保存数据
+        data = {
+            'BP_ID': f"BP{bp_id}", 
+            'solution': solution_text, 
+            'image_paths': [], 
+            'txt_path': ''
+        }
+
+        # 只有确定要这一组数据了，才调用保存函数
         data['txt_path'] = save_solution_to_txt(bp_id, solution_text)
 
-        # 4. 提取图片
-        img_tags = soup.find_all('img', src=lambda src: src and '/examples/' in src)
-
-        # 🔥 新增：筛选条件 —— 只要 12 张图的 BP
-        if len(img_tags) != 12:
-            print(f"BP{bp_id} 图片数量 = {len(img_tags)}（≠ 12），跳过。")
-            return None
-
-        # 下载 12 张图
+        # 下载图片
         image_paths = []
         for img_tag in img_tags:
             img_src = img_tag['src']
@@ -128,13 +127,11 @@ def fetch_bongard_problem(bp_id):
             image_paths.append(path)
 
         data['image_paths'] = image_paths
-
         return data
 
-    except requests.exceptions.RequestException as e:
+    except Exception as e:
         print(f"请求 {url} 时发生错误: {e}")
         return None
-
 
 # ====================================================================
 # 5. 主爬取循环和数据保存
