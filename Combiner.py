@@ -17,7 +17,7 @@ SUB_GRID_ROWS = 3
 SUB_GRID_COLS = 2
 NUM_IMAGES_PER_GROUP = 6
 SINGLE_IMG_SIZE = 60
-IMG_PADDING = 5
+IMG_PADDING = 10  # 稍微增加了间距，给边框留出视觉空间
 SINGLE_GROUP_WIDTH = SUB_GRID_COLS * SINGLE_IMG_SIZE + (SUB_GRID_COLS + 1) * IMG_PADDING
 SINGLE_GROUP_HEIGHT = SUB_GRID_ROWS * SINGLE_IMG_SIZE + (SUB_GRID_ROWS + 1) * IMG_PADDING
 GROUP_SPACING = IMG_PADDING * 2
@@ -32,7 +32,7 @@ except IOError:
     FONT = ImageFont.load_default()
 
 # ====================================================================
-# 核心：处理并合并（支持 GIF 转 PNG）
+# 核心：处理并合并（添加边框支持）
 # ====================================================================
 def process_and_move(bp_id):
     bp_folder = f"BP{bp_id}"
@@ -41,7 +41,7 @@ def process_and_move(bp_id):
     if not os.path.exists(folder_path):
         return False
 
-    # 1. 修改筛选逻辑：同时支持 png 和 gif，并排除汇总图
+    # 1. 筛选图片
     valid_extensions = (".png", ".gif", ".jpg", ".jpeg")
     img_files = sorted([
         f for f in os.listdir(folder_path) 
@@ -63,26 +63,34 @@ def process_and_move(bp_id):
     combined_img = Image.new("RGB", (IMG_AREA_WIDTH + TEXT_AREA_WIDTH, IMG_AREA_HEIGHT), "white")
     draw = ImageDraw.Draw(combined_img)
 
-    # 4. 贴图逻辑（包含格式转换）
+    # 4. 贴图与画边框逻辑
     for i in range(len(img_files)):
         img_path = os.path.join(folder_path, img_files[i])
         try:
-            # 关键：.convert("RGB") 会把 GIF 的第一帧转为标准彩色，并处理透明度
             with Image.open(img_path) as img:
                 img_resized = img.convert("RGB").resize((SINGLE_IMG_SIZE, SINGLE_IMG_SIZE))
             
+            # 计算当前图片所属的组和组内位置
             group_offset_x = 0 if i < NUM_IMAGES_PER_GROUP else (SINGLE_GROUP_WIDTH + GROUP_SPACING)
             idx = i if i < NUM_IMAGES_PER_GROUP else i - NUM_IMAGES_PER_GROUP
             
             x = group_offset_x + IMG_PADDING + (idx % SUB_GRID_COLS) * (SINGLE_IMG_SIZE + IMG_PADDING)
             y = IMG_PADDING + (idx // SUB_GRID_COLS) * (SINGLE_IMG_SIZE + IMG_PADDING)
+            
+            # --- 绘制边框 ---
+            # 边框颜色设置为深灰色 (180, 180, 180)，比纯黑更柔和
+            border_rect = [x - 1, y - 1, x + SINGLE_IMG_SIZE, y + SINGLE_IMG_SIZE]
+            draw.rectangle(border_rect, outline=(180, 180, 180), width=1)
+            
+            # 粘贴图片
             combined_img.paste(img_resized, (x, y))
+            
         except Exception as e:
             print(f"❌ 无法处理图片 {img_path}: {e}")
 
-    # 5. 画线与写字 (保持不变)
+    # 5. 画中间的分隔线与右侧文字区
     center_x = SINGLE_GROUP_WIDTH + GROUP_SPACING // 2
-    draw.line([(center_x, 0), (center_x, IMG_AREA_HEIGHT)], fill="lightgray", width=1)
+    draw.line([(center_x, 10), (center_x, IMG_AREA_HEIGHT - 10)], fill="lightgray", width=1)
     draw.line([(IMG_AREA_WIDTH, 0), (IMG_AREA_WIDTH, IMG_AREA_HEIGHT)], fill="black", width=2)
 
     avg_char_w = 10 
@@ -94,12 +102,12 @@ def process_and_move(bp_id):
     curr_y = TEXT_PADDING
     for line in lines:
         draw.text((IMG_AREA_WIDTH + TEXT_PADDING, curr_y), line, font=FONT, fill="black")
-        curr_y += 20
+        curr_y += 24 # 稍微增加了行高，方便阅读
 
-    # 6. 统一保存为 PNG
+    # 6. 保存
     save_path = os.path.join(TARGET_DIR, f"BP{bp_id}.png")
     combined_img.save(save_path, "PNG")
-    print(f"✅ 合并成功: BP{bp_id}.png")
+    print(f"✅ 已生成带边框图: BP{bp_id}.png")
     return True
 
 if __name__ == "__main__":
@@ -109,4 +117,4 @@ if __name__ == "__main__":
     )
     for folder in all_folders:
         process_and_move(int(folder[2:]))
-    print(f"\n🎉 任务完成！汇总至 '{TARGET_DIR}'")
+    print(f"\n🎉 全部任务完成！请查看 '{TARGET_DIR}' 文件夹。")
