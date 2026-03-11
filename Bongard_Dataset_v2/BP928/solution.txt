@@ -1,0 +1,1 @@
+All subsets of a collection vs. not.
