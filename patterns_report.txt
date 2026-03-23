@@ -1,4 +1,3 @@
---- Sorted Bongard Problems by Image Count (Ascending) ---
 ID: BP196 | Total Images: 13
 ID: BP284 | Total Images: 13
 ID: BP344 | Total Images: 13
