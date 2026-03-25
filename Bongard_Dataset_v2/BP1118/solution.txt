@@ -1,0 +1,1 @@
+	Self-similar only scaled about one point vs. multiple centers of self-similarity.

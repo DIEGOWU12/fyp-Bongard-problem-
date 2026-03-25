@@ -1,0 +1,1 @@
+	Reversing the sequence permutes the objects vs. not.

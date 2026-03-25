@@ -1,0 +1,1 @@
+	Exactly one connected white region for each possible way shapes can overlap vs. not so.

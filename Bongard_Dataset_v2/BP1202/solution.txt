@@ -1,0 +1,1 @@
+	Color of any region is an equal mix of the colors of the overlapping shapes vs. not so.
