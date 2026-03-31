@@ -1,0 +1,1 @@
+Border of black rectangle is incomplete vs. border of black rectangle is complete.

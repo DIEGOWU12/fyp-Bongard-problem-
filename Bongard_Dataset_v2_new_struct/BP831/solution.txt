@@ -1,0 +1,1 @@
+Image of a Bongard Problem with left side having two rules and right side narrowing it down vs. image of Bongard Problem whose right hand side adds no information.

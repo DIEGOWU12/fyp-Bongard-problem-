@@ -1,0 +1,1 @@
+Right pattern is proper subset of left pattern vs. right pattern is not subset of left pattern.

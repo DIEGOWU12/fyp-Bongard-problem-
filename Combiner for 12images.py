@@ -21,8 +21,8 @@ IMG_AREA_HEIGHT = SINGLE_GROUP_HEIGHT
 TEXT_AREA_WIDTH = 350
 TEXT_PADDING = 20
 
-SOURCE_DIR = "your_source_dir"
-TARGET_DIR = "your_target_dir"
+SOURCE_DIR = r"C:\Users\fypuser\Documents\fyp-Bongard-problem-\Bongard_Dataset_v2"
+TARGET_DIR = r"C:\Users\fypuser\Documents\fyp-Bongard-problem-\Bongard_Dataset_v2_processed"
 
 # --- 字体 ---
 try:
@@ -134,6 +134,7 @@ def process_and_move(bp_id):
 # 主程序
 # ====================================================================
 if __name__ == "__main__":
+    os.makedirs(TARGET_DIR, exist_ok=True)
     all_folders = sorted(
         [d for d in os.listdir(SOURCE_DIR) if d.startswith("BP") and d[2:].isdigit()],
         key=lambda x: int(x[2:])

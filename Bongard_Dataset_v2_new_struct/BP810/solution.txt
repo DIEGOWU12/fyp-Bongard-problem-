@@ -1,0 +1,1 @@
+Figures can be transformed into one another by smooth stretching (intersection points stay constant; paths connecting those points remain), while remaining within the 2d box vs. movement out of the plane required.

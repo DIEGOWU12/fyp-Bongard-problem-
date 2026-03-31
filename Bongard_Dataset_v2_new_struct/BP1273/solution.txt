@@ -1,0 +1,1 @@
+Sequence contains each possible way its distinct elements can be arranged as a subsequence vs. not so.

@@ -1,0 +1,1 @@
+Dots equal in number to the sides of the closed region vs. dots unequal in number to the sides of the closed region.

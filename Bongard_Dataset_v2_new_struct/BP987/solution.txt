@@ -1,0 +1,1 @@
+Solution could appear in a Bongard Problem featuring an image of itself on either of its sides vs. solution can appear in a Bongard Problem featuring an image of itself on a certain side only.

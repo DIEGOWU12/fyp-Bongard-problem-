@@ -1,0 +1,1 @@
+Ways of representing the sequence "ABABCBACCBAC" by grouping its elements into equal-sized blocks and relabelling them (identical blocks are represented by the same element) vs. representations of different sequences.

@@ -1,0 +1,1 @@
+Rectangle left after tiling all black shapes into empty square vs. triangle left after tiling all black shapes into empty square.

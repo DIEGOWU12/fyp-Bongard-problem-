@@ -1,0 +1,1 @@
+There is a way of dividing the grid into (more than one) equal-sized blocks such that no block appears more than once vs. there exists no such way of dividing the grid.

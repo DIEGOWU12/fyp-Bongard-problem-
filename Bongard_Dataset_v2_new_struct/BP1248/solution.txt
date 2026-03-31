@@ -1,0 +1,1 @@
+No straight path passes from a white region to a grey one, then to white again (without hitting black) vs. such a path exists.

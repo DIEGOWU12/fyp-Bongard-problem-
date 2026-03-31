@@ -1,0 +1,1 @@
+Content of any square is an image of the whole panel vs. not so.

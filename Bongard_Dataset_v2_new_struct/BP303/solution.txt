@@ -1,0 +1,1 @@
+Three objects are identical, the fourth differs vs. not so.

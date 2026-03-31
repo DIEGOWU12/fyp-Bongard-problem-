@@ -1,0 +1,1 @@
+Odd number of straight line segments vs. even number of straight line segments.

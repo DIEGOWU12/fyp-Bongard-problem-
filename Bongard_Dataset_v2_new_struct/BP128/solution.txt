@@ -1,0 +1,1 @@
+Same objects inside and outside the large shape vs. not same objects inside and outside the large shape.

@@ -1,0 +1,1 @@
+Contains smaller copy of self with black and white inverted vs. not so.

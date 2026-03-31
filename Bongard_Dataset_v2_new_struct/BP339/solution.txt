@@ -1,0 +1,1 @@
+Union of left sets is right set vs. intersection of left sets is right set.

@@ -1,0 +1,1 @@
+White dot can see (in straight lines) all black points vs. white dot cannot see (in straight lines) all black points.

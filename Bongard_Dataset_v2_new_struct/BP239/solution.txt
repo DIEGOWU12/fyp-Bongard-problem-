@@ -1,0 +1,1 @@
+Straight line parallel to line joining the ends of curve AND sliding the straight line suitably can make a closed area vs. straight line perpendicular to line joining the ends of curve.

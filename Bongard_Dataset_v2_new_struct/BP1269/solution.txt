@@ -1,0 +1,1 @@
+Identical pairs of symbols are always on opposite sides of the cube (when assembled) vs. some identical symbols are next to each other on the cube.

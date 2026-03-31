@@ -1,0 +1,1 @@
+Object shown below is the "limit" of the sequence above (end result after "infinite time") versus not so.

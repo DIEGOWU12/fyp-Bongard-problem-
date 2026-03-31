@@ -1,0 +1,1 @@
+	It is possible to deduce the contents of any square from the rest vs. it is not.

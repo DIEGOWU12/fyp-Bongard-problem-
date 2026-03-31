@@ -1,0 +1,1 @@
+No tile shares a partial side with another tile vs. not so.

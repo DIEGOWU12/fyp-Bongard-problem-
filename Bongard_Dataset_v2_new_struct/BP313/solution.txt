@@ -1,0 +1,1 @@
+Closed curves clockwise, open curves counterclockwise vs. closed curves counterclockwise, open curves clockwise.

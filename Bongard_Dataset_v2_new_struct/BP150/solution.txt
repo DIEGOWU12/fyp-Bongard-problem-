@@ -1,0 +1,1 @@
+Odd number of squares vs. even number of squares.

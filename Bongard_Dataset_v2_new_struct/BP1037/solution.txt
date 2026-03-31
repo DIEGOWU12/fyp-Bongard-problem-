@@ -1,0 +1,1 @@
+A multiple of a left number fits right vs. not so.

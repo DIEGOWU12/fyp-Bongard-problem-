@@ -1,0 +1,1 @@
+Examples fit solution (once it is known) relatively obviously vs. examples fit solution in subtle or complex, harder-to-see ways.

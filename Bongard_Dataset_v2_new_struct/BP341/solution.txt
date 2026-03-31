@@ -1,0 +1,1 @@
+Strictly increasing or strictly decreasing border line vs. both increasing and decreasing border line.

@@ -1,0 +1,1 @@
+	If two nodes are linked, they are each linked to a different number of nodes vs. not so.

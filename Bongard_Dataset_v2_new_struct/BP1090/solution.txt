@@ -1,0 +1,1 @@
+Top piece can slide into bottom area in such that there is an unbroken black horizontal region vs. not so.

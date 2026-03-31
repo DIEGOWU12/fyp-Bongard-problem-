@@ -1,0 +1,1 @@
+Line connecting small shapes does not intersect large one vs. line connecting small shapes intersects large one.

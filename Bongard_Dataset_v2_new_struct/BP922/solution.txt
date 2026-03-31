@@ -1,0 +1,1 @@
+One row is rearranged to make the other by swapping an odd number of object pairs vs. one row is rearranged to make the other by swapping an even number of object pairs.

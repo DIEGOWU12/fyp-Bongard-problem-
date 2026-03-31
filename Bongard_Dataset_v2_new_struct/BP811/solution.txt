@@ -1,0 +1,1 @@
+Archimedean tiling (regular polygons, all vertices look the same) versus two-uniform tiling (regular polygons, two different kinds of vertex).
