@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'not same objects inside and outside the large shape' logic, showing geometric shapes with not same objects inside and outside the large shape arrangement, minimalist geometric diagram.

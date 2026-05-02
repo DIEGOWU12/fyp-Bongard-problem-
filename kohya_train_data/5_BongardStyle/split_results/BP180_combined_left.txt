@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Black region narrows at the boundary of black/white' logic, showing geometric shapes with Black region narrows at the boundary of black/white arrangement, minimalist geometric diagram.

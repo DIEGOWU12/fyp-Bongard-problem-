@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'the minimum number of edges whose removal results in two disconnected graphs is 2' logic, showing geometric shapes with the minimum number of edges whose removal results in two disconnected graphs is 2 arrangement, minimalist geometric diagram.

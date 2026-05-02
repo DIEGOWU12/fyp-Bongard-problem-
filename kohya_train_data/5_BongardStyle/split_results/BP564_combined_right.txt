@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'connected segment intersecting boundary of convex hull' logic, showing geometric shapes with connected segment intersecting boundary of convex hull arrangement, minimalist geometric diagram.

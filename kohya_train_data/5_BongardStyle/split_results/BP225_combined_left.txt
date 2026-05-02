@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Low contrast (no fully black region)' logic, showing geometric shapes with Low contrast (no fully black region) arrangement, minimalist geometric diagram.

@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Object at lower-right fits as n-th item in the top row of objects, where n is the number of dots at lower-left' logic, showing geometric shapes with Object at lower-right fits as n-th item in the top row of objects, where n is the number of dots at lower-left arrangement, minimalist geometric diagram.

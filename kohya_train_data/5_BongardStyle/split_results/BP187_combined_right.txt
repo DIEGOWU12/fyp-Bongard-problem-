@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'sides of parts are one less than sides of whole' logic, showing geometric shapes with sides of parts are one less than sides of whole arrangement, minimalist geometric diagram.

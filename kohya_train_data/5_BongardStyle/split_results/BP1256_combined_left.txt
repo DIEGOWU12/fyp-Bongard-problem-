@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Arrows which if moved at speeds proportional to their length would pass eachother' logic, showing geometric shapes with Arrows which if moved at speeds proportional to their length would pass eachother arrangement, minimalist geometric diagram.

@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'the center of mass is not located in a region where it can see (in straight lines) all points' logic, showing geometric shapes with the center of mass is not located in a region where it can see (in straight lines) all points arrangement, minimalist geometric diagram.

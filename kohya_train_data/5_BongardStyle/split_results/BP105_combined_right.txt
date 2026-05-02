@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'ends of line do not point to the same direction' logic, showing geometric shapes with ends of line do not point to the same direction arrangement, minimalist geometric diagram.

@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'circle centers are not collinear' logic, showing geometric shapes with circle centers are not collinear arrangement, minimalist geometric diagram.

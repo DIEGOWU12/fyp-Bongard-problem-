@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Top piece can fit into bottom piece without leaving any overhangs' logic, showing geometric shapes with Top piece can fit into bottom piece without leaving any overhangs arrangement, minimalist geometric diagram.

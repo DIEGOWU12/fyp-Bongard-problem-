@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Center of mass within the black area of the shape' logic, showing geometric shapes with Center of mass within the black area of the shape arrangement, minimalist geometric diagram.

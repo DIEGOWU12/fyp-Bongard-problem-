@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'either more or less than half of the square is filled' logic, showing geometric shapes with either more or less than half of the square is filled arrangement, minimalist geometric diagram.

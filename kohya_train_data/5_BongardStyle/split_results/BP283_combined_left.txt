@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Rectangle left after tiling all black shapes into empty square' logic, showing geometric shapes with Rectangle left after tiling all black shapes into empty square arrangement, minimalist geometric diagram.

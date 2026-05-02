@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'the game results in a draw if the players play optimally' logic, showing geometric shapes with the game results in a draw if the players play optimally arrangement, minimalist geometric diagram.

@@ -3,7 +3,7 @@ import re
 from PIL import Image
 
 # 路径设置
-input_folder = r'C:\Users\Lenovo\OneDrive\文档\GitHub\fyp-Bongard-problem-\kohya_train_data\1_BongardStyle'
+input_folder = r'C:\Users\Lenovo\OneDrive\文档\GitHub\fyp-Bongard-problem-\kohya_train_data\5_BongardStyle'
 output_folder = os.path.join(input_folder, 'split_results')
 
 if not os.path.exists(output_folder):

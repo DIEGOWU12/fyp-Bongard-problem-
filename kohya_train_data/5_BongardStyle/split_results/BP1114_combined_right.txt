@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'only one contains the other' logic, showing geometric shapes with only one contains the other arrangement, minimalist geometric diagram.

@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Shape can tile itself' logic, showing geometric shapes with Shape can tile itself arrangement, minimalist geometric diagram.

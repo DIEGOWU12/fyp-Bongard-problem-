@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Dot's position within square is center of square's position within panel' logic, showing geometric shapes with Dot's position within square is center of square's position within panel arrangement, minimalist geometric diagram.

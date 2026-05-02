@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'white dot is not at center of mass' logic, showing geometric shapes with white dot is not at center of mass arrangement, minimalist geometric diagram.

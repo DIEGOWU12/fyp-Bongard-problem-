@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Discrete points intersecting boundary of convex hull' logic, showing geometric shapes with Discrete points intersecting boundary of convex hull arrangement, minimalist geometric diagram.

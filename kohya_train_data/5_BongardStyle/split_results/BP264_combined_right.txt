@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'no closed area' logic, showing geometric shapes with no closed area arrangement, minimalist geometric diagram.

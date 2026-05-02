@@ -1,0 +1,1 @@
+BongardStyle, a 3x2 geometric grid, white background, each panel features a 'at least one shape in the large square appears outside of it' logic, showing geometric shapes with at least one shape in the large square appears outside of it arrangement, minimalist geometric diagram.
