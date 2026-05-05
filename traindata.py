@@ -4,7 +4,7 @@ import shutil
 # 你之前整理好的那个文件夹
 SOURCE_ROOT = "Bongard_Dataset_v2_new_struct" 
 # 准备给 Kohya 训练用的新文件夹
-TRAIN_DATA_DIR = "kohya_train_data/10_BongardStyle"
+TRAIN_DATA_DIR = "kohya_train_data/5_BongardStyle"
 
 os.makedirs(TRAIN_DATA_DIR, exist_ok=True)
 

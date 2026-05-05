@@ -1,7 +1,7 @@
 import os
 
 # 你的图片路径
-data_path = r"D:\user\Documents\GitHub\fyp-Bongard-problem-\kohya_train_data\10_BongardStyle"
+data_path = r"/kohya_train_data/5_BongardStyle"
 
 def rename_captions():
     files = os.listdir(data_path)
