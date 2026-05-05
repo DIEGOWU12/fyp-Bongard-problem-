@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'A shape contains a square if and only if it is a circle' logic, showing geometric shapes with A shape contains a square if and only if it is a circle arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'A shape contains a square if and only if it is a circle' logic.

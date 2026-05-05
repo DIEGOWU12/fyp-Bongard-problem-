@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Object thinner at top' logic, showing geometric shapes with Object thinner at top arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'Object thinner at top' logic.

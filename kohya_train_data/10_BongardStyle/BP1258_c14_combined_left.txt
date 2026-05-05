@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'It is possible to deduce the contents of any square from the rest' logic, showing geometric shapes with It is possible to deduce the contents of any square from the rest arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'It is possible to deduce the contents of any square from the rest' logic.

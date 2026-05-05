@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Content of any square is an image of the whole panel' logic, showing geometric shapes with Content of any square is an image of the whole panel arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'Content of any square is an image of the whole panel' logic.

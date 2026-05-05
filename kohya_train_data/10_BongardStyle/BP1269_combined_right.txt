@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'some identical symbols are next to each other on the cube' logic, showing geometric shapes with some identical symbols are next to each other on the cube arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'some identical symbols are next to each other on the cube' logic.

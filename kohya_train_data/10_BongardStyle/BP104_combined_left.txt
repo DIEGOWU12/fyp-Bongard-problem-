@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'One circle passes through the center of the other circle' logic, showing geometric shapes with One circle passes through the center of the other circle arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'One circle passes through the center of the other circle' logic.

@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'turns in different directions and no rectangular loop exists' logic, showing geometric shapes with turns in different directions and no rectangular loop exists arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'turns in different directions and no rectangular loop exists' logic.

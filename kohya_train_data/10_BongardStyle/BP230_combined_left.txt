@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'The sum of vertices, line ends, and dots is 7' logic, showing geometric shapes with The sum of vertices, line ends, and dots is 7 arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'The sum of vertices, line ends, and dots is 7' logic.

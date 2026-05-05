@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'no grouping of elements into (more than one) equal-sized blocks is palindromic' logic, showing geometric shapes with no grouping of elements into (more than one) equal-sized blocks is palindromic arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'no grouping of elements into (more than one) equal-sized blocks is palindromic' logic.

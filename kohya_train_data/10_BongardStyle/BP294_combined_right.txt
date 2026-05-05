@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'the two points are unreachable by any path' logic, showing geometric shapes with the two points are unreachable by any path arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'the two points are unreachable by any path' logic.

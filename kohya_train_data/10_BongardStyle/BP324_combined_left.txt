@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Left shapes can be placed on top of each other to make right shape' logic, showing geometric shapes with Left shapes can be placed on top of each other to make right shape arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'Left shapes can be placed on top of each other to make right shape' logic.

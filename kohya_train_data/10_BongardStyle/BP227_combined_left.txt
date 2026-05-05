@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Dots touch each other if and only if no large region touches the edges of the box' logic, showing geometric shapes with Dots touch each other if and only if no large region touches the edges of the box arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'Dots touch each other if and only if no large region touches the edges of the box' logic.

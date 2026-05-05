@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'fractal iteration based on 1-D (line segments)' logic, showing geometric shapes with fractal iteration based on 1-D (line segments) arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'fractal iteration based on 1-D (line segments)' logic.

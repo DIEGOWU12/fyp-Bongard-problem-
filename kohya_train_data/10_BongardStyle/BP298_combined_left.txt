@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'One of the two small squares is near the lower-right corner' logic, showing geometric shapes with One of the two small squares is near the lower-right corner arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'One of the two small squares is near the lower-right corner' logic.

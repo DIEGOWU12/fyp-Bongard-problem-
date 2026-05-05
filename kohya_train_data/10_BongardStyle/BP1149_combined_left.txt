@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Number in the Nth box (from the left) is how many numbers appear N times' logic, showing geometric shapes with Number in the Nth box (from the left) is how many numbers appear N times arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'Number in the Nth box (from the left) is how many numbers appear N times' logic.

@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'Dots collinear with center of circle' logic, showing geometric shapes with Dots collinear with center of circle arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'Dots collinear with center of circle' logic.

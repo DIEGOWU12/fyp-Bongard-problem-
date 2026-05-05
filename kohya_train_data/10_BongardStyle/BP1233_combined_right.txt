@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'curves only cross themselves (or do not cross at all)' logic, showing geometric shapes with curves only cross themselves (or do not cross at all) arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'curves only cross themselves (or do not cross at all)' logic.

@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'dots are vertices of a triangle standing on a vertex' logic, showing geometric shapes with dots are vertices of a triangle standing on a vertex arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'dots are vertices of a triangle standing on a vertex' logic.

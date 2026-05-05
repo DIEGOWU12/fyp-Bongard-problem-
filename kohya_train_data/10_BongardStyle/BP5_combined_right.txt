@@ -1,1 +1,1 @@
-BongardStyle, a 3x2 geometric grid, white background, each panel features a 'is smooth without straight lines or corners' logic, showing geometric shapes with is smooth without straight lines or corners arrangement, minimalist geometric diagram.
+Bongard style, one large composite image consisting of six individual images arranged in a 3x2 layout. Each of the six images features a 'is smooth without straight lines or corners' logic.
