@@ -1,16 +1,14 @@
 import torch
+import os
 from diffusers import StableDiffusionXLPipeline
 
-# 1. 设置模型路径
-# base_model_path 是你截图里用的 stabilityai/stable-diffusion-xl-base-1.0
-base_model_path = "stabilityai/stable-diffusion-xl-base-1.0"
 # weight_path 是你训练出来的那个几 GB 的文件路径
-weight_path = r"D:\kohya_ss\outputs\sdxl_trained_3.safetensors"
+weight_path = r"D:\kohya_ss\outputs\sdxltrained2.safetensors"
 
 # 2. 加载基础模型
 print("正在加载基础模型...")
 pipe = StableDiffusionXLPipeline.from_pretrained(
-    base_model_path, 
+    "stabilityai/stable-diffusion-xl-base-1.0", # 或者具体的模型ID
     torch_dtype=torch.float16, 
     variant="fp16", 
     use_safetensors=True
@@ -41,6 +39,16 @@ image = pipe(
     height=1024
 ).images[0]
 
-# 6. 保存
-image.save("bongard_output.png")
-print("生成成功！图片已保存为 bongard_output.png")
+# 6. 保存到指定文件夹
+output_dir = "bongard_output"
+
+# 如果文件夹不存在，则自动创建
+if not os.path.exists(output_dir):
+    os.makedirs(output_dir)
+    print(f"已创建文件夹: {output_dir}")
+
+# 设置完整的文件路径
+save_path = os.path.join(output_dir, "bongard_test_1.png")
+
+image.save(save_path)
+print(f"生成成功！图片已保存至: {save_path}")
