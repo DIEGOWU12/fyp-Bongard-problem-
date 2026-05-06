@@ -3,13 +3,13 @@ import os
 from diffusers import StableDiffusionXLPipeline
 
 # weight_path 是你训练出来的那个几 GB 的文件路径
-weight_path = r"D:\kohya_ss\outputs\sdxltrained2.safetensors"
+weight_path = r"D:\kohya_ss\outputs\sdxltrained3-000019.safetensors"
 
 # 2. 加载基础模型
 print("正在加载基础模型...")
 pipe = StableDiffusionXLPipeline.from_pretrained(
     "stabilityai/stable-diffusion-xl-base-1.0", # 或者具体的模型ID
-    torch_dtype=torch.float16, 
+    torch_dtype=torch.bfloat16, 
     variant="fp16", 
     use_safetensors=True
 ).to("cuda")
